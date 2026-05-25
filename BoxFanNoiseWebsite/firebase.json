@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "site": "boxfannoise",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "originHash" : "02ec1adb0090fe7fc1e7831f3f74774fbc6d43644095018f9b6f24d8780b764c",
+  "pins" : [
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "0cb03fd7564d27345bcd96144b811e56212949c6",
+        "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "superscript-ios-next",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/superwall/superscript-ios-next",
+      "state" : {
+        "revision" : "abb2c8c96e958aabe11a84df67860ad7bbef3b68",
+        "version" : "1.0.14"
+      }
+    },
+    {
+      "identity" : "superwall-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/superwall/Superwall-iOS",
+      "state" : {
+        "revision" : "f738aeb3d55f326f96279fb803ebfa3cac39e3e0",
+        "version" : "4.15.3"
+      }
+    }
+  ],
+  "version" : 3
+}
