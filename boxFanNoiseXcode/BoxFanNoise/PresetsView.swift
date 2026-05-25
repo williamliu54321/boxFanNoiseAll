@@ -7,6 +7,7 @@ import SwiftUI
 
 struct PresetsView: View {
     @State private var engine = SoundEngine.shared
+    @ObservedObject private var premium = PremiumStatus.shared
 
     private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
 
@@ -21,7 +22,7 @@ struct PresetsView: View {
 
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach(SoundPreset.defaults) { preset in
-                        let isPremium = preset.sounds.contains { !SoundEngine.freeSoundIds.contains($0.soundId) }
+                        let isPremium = preset.sounds.contains { !SoundEngine.freeSoundIds.contains($0.soundId) } && !premium.isPremium
                         PresetCard(preset: preset, isPremium: isPremium, onTap: { engine.loadPreset(preset) })
                     }
                 }

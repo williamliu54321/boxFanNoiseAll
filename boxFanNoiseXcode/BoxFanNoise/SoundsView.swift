@@ -9,12 +9,15 @@ import Lottie
 
 struct SoundsView: View {
     @State private var engine = SoundEngine.shared
+    @ObservedObject private var premium = PremiumStatus.shared
 
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
-                topBar
-                    .padding(.top, 12)
+                if !premium.isPremium {
+                    topBar
+                        .padding(.top, 12)
+                }
 
                 FanCenterpiece(isPlaying: engine.isPlaying)
                     .frame(height: 260)
@@ -90,7 +93,7 @@ struct SoundsView: View {
                 SoundCard(
                     sound: sound,
                     isActive: engine.activeSounds.contains(where: { $0.soundId == sound.id }),
-                    isPremium: !SoundEngine.freeSoundIds.contains(sound.id),
+                    isPremium: !SoundEngine.freeSoundIds.contains(sound.id) && !premium.isPremium,
                     onTap: {
                         if engine.activeSounds.contains(where: { $0.soundId == sound.id }) {
                             engine.removeSound(sound.id)
@@ -144,7 +147,7 @@ struct SoundsView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(TimerOption.allCases, id: \.self) { option in
-                        let isPremium = !SoundEngine.freeTimerOptions.contains(option)
+                        let isPremium = !SoundEngine.freeTimerOptions.contains(option) && !premium.isPremium
                         Button {
                             engine.setTimer(option)
                         } label: {

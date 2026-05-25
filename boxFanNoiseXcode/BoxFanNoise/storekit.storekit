@@ -17,7 +17,7 @@
     {
       "displayPrice" : "19.99",
       "familyShareable" : false,
-      "internalID" : "6C43CFA2",
+      "internalID" : "E76B1067",
       "localizations" : [
         {
           "description" : "",
@@ -25,9 +25,9 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "lifetime_20",
-      "referenceName" : "lifetime_20",
-      "type" : "Consumable"
+      "productID" : "lifetime_20a",
+      "referenceName" : "lifetime_20a",
+      "type" : "NonConsumable"
     }
   ],
   "settings" : {

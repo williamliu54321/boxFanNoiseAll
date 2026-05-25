@@ -80,10 +80,10 @@ struct SettingsView: View {
         SettingsSection(title: "Legal") {
             VStack(spacing: 0) {
                 LinkRow(icon: "hand.raised.fill", label: "Privacy Policy",
-                        url: URL(string: "https://emberforgeapps.com/privacy.html")!)
+                        url: URL(string: "https://boxfannoise.web.app/privacy.html")!)
                 Divider().background(Color.white.opacity(0.08))
                 LinkRow(icon: "doc.text.fill", label: "Terms of Service",
-                        url: URL(string: "https://emberforgeapps.com/terms.html")!)
+                        url: URL(string: "https://boxfannoise.web.app/terms.html")!)
             }
         }
     }
@@ -94,7 +94,7 @@ struct SettingsView: View {
         SettingsSection(title: "Support") {
             VStack(spacing: 0) {
                 LinkRow(icon: "questionmark.circle.fill", label: "Help & Support",
-                        url: URL(string: "https://emberforgeapps.com/support.html")!)
+                        url: URL(string: "https://boxfannoise.web.app/support.html")!)
                 Divider().background(Color.white.opacity(0.08))
                 LinkRow(icon: "envelope.fill", label: "Contact Us",
                         trailing: "admin@emberforgeapps.com",
